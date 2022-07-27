@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          is: /^[A-Z][a-z][0-9]*$/,
+          is: /[A-Z][a-z]*([0-9]*)?/,
           len: [2, 32],
         },
       },
@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          is: /^[A-Z][a-z][0-9]*$/,
+          is: /([A-Z]*)?([a-z]*)?([0-9]*)?/,
           len: [2, 32],
         },
       },
@@ -35,14 +35,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           isIn: [[1, 2, 3, 4, 6, 8, 12]],
-          msg: 'you have to choose from the range [1,2,3,4,6,8,12]',
+          // msg: 'you have to choose from the range [1,2,3,4,6,8,12]',
         },
       },
       cpu: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          is: /^[A-Z][a-z][0-9]*$/,
+          is: /([A-Z]*)?([a-z]*)?([0-9]*)?/,
           len: [2, 32],
         },
       },
@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Phone',
-      tableName: 'phones',
+      tableName: 'Phones',
       underscored: true,
     }
   );
