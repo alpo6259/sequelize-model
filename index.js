@@ -22,7 +22,7 @@ const { Op } = require('sequelize');
   //   программно добавление нового телефона,---------------------------done--*
 
   // const createdPhone = await Phone.create(phone);
-  //   console.log('createdPhone', createdPhone);
+  // console.log('createdPhone', createdPhone);
 
   //   получение списка телефонов (* 3-я страница при просмотре
   //   по 4 телефона на странице, упорядоченных по году издания)---------done---

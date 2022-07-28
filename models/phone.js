@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Phone',
-      tableName: 'Phones',
+      tableName: 'phones',
       underscored: true,
     }
   );
