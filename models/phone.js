@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
           is: /[A-Z][a-z]*([0-9]*)?/,
           len: [2, 32],
         },
+        unique: 'brandModel',
       },
       model: {
         type: DataTypes.STRING,
@@ -21,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
           is: /([A-Z]*)?([a-z]*)?([0-9]*)?/,
           len: [2, 32],
         },
+        unique: 'brandModel',
       },
       manufactureDate: {
         type: DataTypes.DATEONLY,
