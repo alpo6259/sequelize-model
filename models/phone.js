@@ -40,16 +40,14 @@ module.exports = (sequelize, DataTypes) => {
           // msg: 'you have to choose from the range [1,2,3,4,6,8,12]',
         },
       },
-      cpu: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          is: /([A-Z]*)?([a-z]*)?([0-9]*)?/,
-          len: [2, 32],
-        },
+      screen: {
+        type: DataTypes.FLOAT,
+        validate: { min: 4 },
       },
-      screen: { type: DataTypes.FLOAT, validate: { min: 4 } },
-      nfc: { type: DataTypes.BOOLEAN, defaultValue: false },
+      nfc: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
     },
     {
       sequelize,

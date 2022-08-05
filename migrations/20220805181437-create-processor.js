@@ -1,48 +1,36 @@
 'use strict';
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('phones', {
+    await queryInterface.createTable('processors', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      brand: {
+      title: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      model: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      manufactureDate: {
-        type: Sequelize.DATEONLY,
-        allowNull: false,
-      },
-      ram: {
+      bit_rate: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-
-      screen: {
-        type: Sequelize.FLOAT,
+      serial_number: {
+        type: Sequelize.STRING,
+        allowNull: false,
       },
-      nfc: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-      },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE,
       },
     });
   },
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('phones');
+    await queryInterface.dropTable('Processors');
   },
 };
